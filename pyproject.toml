@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "tdd-fastapi-docker"
+version = "0.0.1"
+description = ""
+authors = ["Ryan Butler <butryan@amazon.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.63.0"
+uvicorn = "^0.13.4"
+pre-commit = "^2.12.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
