@@ -1,7 +1,6 @@
 import uvicorn
-from fastapi import Depends, FastAPI
-
 from api.config import Settings, get_settings
+from fastapi import Depends, FastAPI
 
 api = FastAPI()
 
