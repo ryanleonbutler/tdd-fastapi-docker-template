@@ -9,6 +9,8 @@ python = "^3.9"
 fastapi = "^0.63.0"
 uvicorn = "^0.13.4"
 pre-commit = "^2.12.1"
+tortoise = "^0.1.1"
+asyncpg = "^0.22.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"
