@@ -1,25 +1,25 @@
 import os
 
-from api.config import Settings, get_settings
+from app.config import Settings, get_settings
 from fastapi import Depends, FastAPI
 from tortoise.contrib.fastapi import register_tortoise
 
-api = FastAPI()
+app = FastAPI()
 
 
 register_tortoise(
-    api,
+    app,
     db_url=os.environ.get("DATABASE_URL"),
-    modules={"models": ["api.models.tortoise"]},
+    modules={"models": ["app.models.tortoise"]},
     generate_schemas=True,
     add_exception_handlers=True,
 )
 
 
-@api.get("/ping")
+@app.get("/ping")
 async def pong(settings: Settings = Depends(get_settings)):
     return {
-        "Ping": "Pong",
+        "ping": "pong",
         "environment": settings.environment,
         "testing": settings.testing,
     }
