@@ -6,7 +6,7 @@ authors = ["Ryan Butler <butryan@amazon.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-fastapi = "^0.63.0"
+fastapi = "^0.109.1"
 uvicorn = "^0.13.4"
 tortoise = "^0.1.1"
 asyncpg = "^0.22.0"
